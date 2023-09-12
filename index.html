@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <audio src="" id="audio"></audio>
+  <div class="xpod">
+    <main>
+      <div class="imageContainer">
+        <div class="imageWrapper">
+          <img id="trackImg" src="" alt="trackImg">
+        </div>
+        <div class="vinylWrapper">
+          <img src="https://cdn.pixabay.com/photo/2012/04/13/13/23/disc-32390_1280.png" alt="">
+        </div>
+      </div>
+
+      <div class="titleContainer">
+        <h3 class="songName"></h3>
+        <span class="artistName"></span>
+      </div>
+      <div class="songSlider">
+        <span class="currentTime"></span>
+        <span class="songDuration"></span>
+        <input type="range" value="0" class="seekBar">
+      </div>
+      <div class="controls">
+        <button class="prevBtn"><i class="fa-solid fa-backward-step"></i></button>
+        <button id="playButton"><i class="fa-solid fa-circle-pause"></i></button>
+        <button class="nextBtn"><i class="fa-solid fa-forward-step"></i></button>
+      </div>
+    </main>
+    <section>
+      <div class="explore">
+        <div class="header">
+          <h2 class="secTitle">Explore</h2>
+        </div>
+        <div class="tab">
+          <button class="tablinks" onclick="openTab(event, 'lyrics')" id="defaultOpen">Lyrics</button>
+          <button class="tablinks" onclick="openTab(event, 'otherAlbums')">Other Albums</button>
+          <button class="tablinks" onclick="openTab(event, 'relatedArtists')">Related Artists</button>
+        </div>
+
+        <div id="lyrics" class="tabContent">
+          <div class="lyricsContainer">
+          </div>
+        </div>
+
+        <div id="otherAlbums" class="tabContent">
+          <div class="albumsWrapper">
+
+          </div>
+        </div>
+
+        <div id="relatedArtists" class="tabContent">
+          <div class="relatedArtistsWrapper">
+
+          </div>
+        </div>
+    </section>
+  </div>
+
+
+  <script src="data.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
